@@ -8,7 +8,7 @@ echo "UUID: $UUID"
 echo "PATH: $PATH"
 
 # replace variables
-sed -e "s/\$PATH/$PATH/g" -e "s/\$PORT/$PORT/g" /caddy.conf
+sed -e "s/\$PATH/$PATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf
 sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/$PATH/g" /jump.json
 
 # run xp

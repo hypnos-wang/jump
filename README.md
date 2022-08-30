@@ -1,4 +1,4 @@
 # jump
 jump something
 
-## just deploy it and enjoy!
+> the main branch is for railway, just deploy it and enjoy!.

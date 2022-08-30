@@ -12,9 +12,10 @@ wget -qO /xp $URL/xp
 # set up variables
 PORT=443
 UUID=$(cat /proc/sys/kernel/random/uuid)
-PATH="/less"
+PATH="less"
 echo "UUID: $UUID"
 echo "PATH: $PATH"
+echo "TEST: $TEST"
 
 # replace variables
 sed -e "s/\$PATH/$PATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf

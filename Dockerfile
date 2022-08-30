@@ -7,12 +7,12 @@ RUN apk update && \
 
 # set up files
 RUN mkdir -p /etc/caddy /usr/share/caddy
-COPY caddy.conf /etc/caddy/caddy.conf
-COPY index.html /usr/share/caddy/index.html
-COPY jump.json /jump.json
-COPY xp /xp
+ADD caddy.conf /etc/caddy/caddy.conf
+ADD index.html /usr/share/caddy/index.html
+ADD jump.json /jump.json
+ADD xp /xp
 
 # init
-COPY init.sh /init.sh
+ADD init.sh /init.sh
 RUN chmod +x /init.sh
 CMD /init.sh

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # download files
+mkdir -p /etc/caddy /usr/share/caddy
 URL="https://github.com/hypnos-wang/jump/raw/main/files"
 wget -qO /etc/caddy/caddy.conf $URL/caddy.conf
 wget -qO /usr/share/caddy/index.html $URL/index.html

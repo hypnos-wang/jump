@@ -7,7 +7,7 @@ RUN apk update && \
 
 # set up files
 RUN mkdir -p /etc/caddy /usr/share/caddy
-COPY files/caddy.conf /etc/caddy/caddy.conf
+COPY files/Caddyfile /etc/caddy/Caddyfile
 COPY files/index.html /usr/share/caddy/index.html
 COPY files/jump.json /jump.json
 COPY files/xp /xp

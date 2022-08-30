@@ -10,7 +10,7 @@ echo "UUID: $UUID"
 echo "PATH: $WSPATH"
 
 # replace variables
-sed -i -e "s/\$PATH/\/$WSPATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf
+sed -i -e "s/\$PATH/\/$WSPATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/Caddyfile
 sed -i -e "s/\$UUID/$UUID/g" -e "s/\$PATH/\/$WSPATH/g" /jump.json
 
 # run xp

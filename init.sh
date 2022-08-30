@@ -5,13 +5,13 @@ PORT=443
 if [ "$UUID" = "" ]; then
   UUID=$(cat /proc/sys/kernel/random/uuid)
 fi
-WSPATH="/less"
+WSPATH="less"
 echo "UUID: $UUID"
 echo "PATH: $WSPATH"
 
 # replace variables
-sed -e "s/\$PATH/$WSPATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf
-sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/$WSPATH/g" /jump.json
+sed -e "s/\$PATH/\/$WSPATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf
+sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/\/$WSPATH/g" /jump.json
 
 # run xp
 chmod +x /xp

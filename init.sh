@@ -18,12 +18,12 @@ echo "UUID: $UUID"
 echo "PATH: $PATH"
 
 if [ -e /jump.json ]; then
-  echo "yes"
+  cat /jump.json
 fi
 
 # # replace variables
 # sed -e "s/\$PATH/$PATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/caddy.conf
-sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/$PATH/g" /jump.json
+# sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/$PATH/g" /jump.json
 
 # # run xp
 # chmod +x /xp

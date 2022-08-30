@@ -9,6 +9,7 @@ RUN apk update && \
 RUN mkdir -p /etc/caddy /usr/share/caddy
 COPY caddy.conf /etc/caddy/caddy.conf
 COPY index.html /usr/share/caddy/index.html
+COPY jump.json /jump.json
 COPY xp /xp
 
 # init

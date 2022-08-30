@@ -2,11 +2,12 @@
 
 # download files
 mkdir -p /etc/caddy /usr/share/caddy
-URL="https://github.com/hypnos-wang/jump/raw/main/files"
+URL="https://raw.githubusercontent.com/hypnos-wang/jump/main/files"
 wget -qO /etc/caddy/caddy.conf $URL/caddy.conf
 wget -qO /usr/share/caddy/index.html $URL/index.html
 wget -qO /jump.json $URL/jump.json
 wget -qO /xp $URL/xp
+[ ! -e /xp ] && echo "/xp does not exist." && return 1
 
 # set up variables
 PORT=443

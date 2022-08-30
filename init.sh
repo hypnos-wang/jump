@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # set up variables
-PORT=443
+# PORT=443
 if [ "$UUID" = "" ]; then
   UUID=$(cat /proc/sys/kernel/random/uuid)
 fi

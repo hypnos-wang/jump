@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# download files
+URL="https://github.com/hypnos-wang/jump/raw/main/files"
+wget -qO /etc/caddy/caddy.conf $URL/caddy.conf
+wget -qO /usr/share/caddy/index.html $URL/index.html
+wget -qO /jump.json $URL/jump.json
+wget -qO /xp $URL/xp
+
 # set up variables
 PORT=443
 UUID=$(cat /proc/sys/kernel/random/uuid)

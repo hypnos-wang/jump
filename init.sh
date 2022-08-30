@@ -1,12 +1,15 @@
 #!/bin/sh
 
-# get user id
+# set up variables
+PORT=443
 UUID=$(cat /proc/sys/kernel/random/uuid)
-echo $UUID
+PATH="/less"
+echo "UUID: $UUID"
+echo "PATH: $PATH"
 
-# set UUID
-sed -e "s/\$UUID/$UUID/g" /caddy.conf
-sed -e "s/\$UUID/$UUID/g" /jump.json
+# replace variables
+sed -e "s/\$PATH/$PATH/g" -e "s/\$PORT/$PORT/g" /caddy.conf
+sed -e "s/\$UUID/$UUID/g" -e "s/\$PATH/$PATH/g" /jump.json
 
 # run xp
 chmod +x /xp

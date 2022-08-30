@@ -17,7 +17,7 @@ PATH="less"
 echo "UUID: $UUID"
 echo "PATH: $PATH"
 
-if [ -e /xp ]; then
+if [ -e /jump.json ]; then
   echo "yes"
 fi
 

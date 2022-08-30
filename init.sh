@@ -1,13 +1,14 @@
 #!/bin/sh
 
 # set up variables
-# PORT=443
+PORT=443
 if [ "$UUID" = "" ]; then
   UUID=$(cat /proc/sys/kernel/random/uuid)
 fi
 WSPATH="less"
 echo "UUID: $UUID"
 echo "PATH: $WSPATH"
+echo "PORT: $PORT"
 
 # replace variables
 sed -i -e "s/\$PATH/\/$WSPATH/g" -e "s/\$PORT/$PORT/g" /etc/caddy/Caddyfile

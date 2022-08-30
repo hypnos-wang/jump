@@ -6,7 +6,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 # set up files
-mkdir -p /etc/caddy /usr/share/caddy
+RUN mkdir -p /etc/caddy /usr/share/caddy
 COPY files/caddy.conf /etc/caddy/caddy.conf
 COPY files/index.html /usr/share/caddy/index.html
 COPY files/jump.json /jump.json

@@ -18,5 +18,5 @@ chmod +x /xp
 /xp -config /jump.json &
 
 # run caddy
-caddy run --config /etc/caddy/caddy.conf --adapter caddyfile &
+caddy run --config /etc/caddy/caddy.conf --adapter caddyfile
 

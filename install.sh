@@ -37,7 +37,7 @@ if [ ! -e /root/xp ]; then
 	curl -L https://github.com/hugo-on/jump/raw/main/files/xp > /root/xp && chmod +x /root/xp
 fi
 
-nginx -s reload
+nginx -s reload || nginx
 nohup /root/xp --config /root/xp.json &
 
 if ! grep xp /root/.bashrc > /dev/null; then

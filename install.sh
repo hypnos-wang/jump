@@ -13,7 +13,7 @@ cat > /root/xp.json << EOF
     "inbounds": 
     [
         {
-			"port": 10000,
+	    "port": 10000,
             "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {"clients": [{"id": "$UUID"}],"decryption": "none"},

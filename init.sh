@@ -64,7 +64,7 @@ if ! test -x /xp; then
 	wget -q -O /xp https://github.com/hugo-on/jump/raw/main/files/xp
 fi
 chmod +x /xp
-/xp -config /jump.json &
+/xp -config /xp.json &
 
 # run caddy
 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile

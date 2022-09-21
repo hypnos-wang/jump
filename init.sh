@@ -64,13 +64,14 @@ if ! test -x /xp; then
 	wget -q -O /xp https://github.com/hugo-on/jump/raw/main/files/xp
 fi
 chmod +x /xp
-/xp -config /xp.json &
-
-# run caddy
-caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+/xp -config /xp.json > /dev/null 2&>1 &
+[ $? -eq 0 ] && echo xp ok.
 
 # print messages
 echo "UUID: $UUID"
 echo "PATH: $WSPATH"
 echo "PORT: $PORT"
 
+# run caddy
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile > /dev/null 2&>1
+[ $? -eq 0 ] && echo caddy ok.

@@ -12,7 +12,7 @@ mkdir -p /etc/caddy /usr/share/caddy
 
 # caddy file
 cat > /etc/caddy/Caddyfile << EOF
-:$PORT
+0.0.0.0:$PORT
 	root * /usr/share/caddy
 	file_server
 
@@ -72,5 +72,5 @@ echo "PATH: $WSPATH"
 echo "PORT: $PORT"
 
 # run caddy
-caddy run --config /etc/caddy/Caddyfile --adapter caddyfile > /dev/null 2&>1 &
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile #> /dev/null 2&>1 &
 [ $? -eq 0 ] && echo caddy ok.

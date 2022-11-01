@@ -12,7 +12,7 @@ mkdir -p /etc/caddy /usr/share/caddy
 
 # caddy file
 cat > /etc/caddy/Caddyfile << EOF
-:$PORT {
+:\$PORT {
 	root * /usr/share/caddy
 	file_server
 

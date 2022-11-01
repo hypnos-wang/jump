@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # set up variables
-PORT=$PORT
+PORT=443
 UUID=""
 if [ "$UUID" = "" ]; then
   UUID=$(cat /proc/sys/kernel/random/uuid)
@@ -12,15 +12,15 @@ mkdir -p /etc/caddy /usr/share/caddy
 
 # caddy file
 cat > /etc/caddy/Caddyfile << EOF
-0.0.0.0:$PORT
+0.0.0.0:$PORT {
 	root * /usr/share/caddy
 	file_server
-
 	reverse_proxy $WSPATH {
 		to unix//etc/caddy/less
 	}
+}
 EOF
-echo $?
+
 # json file
 cat > /xp.json << EOF
 {

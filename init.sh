@@ -33,7 +33,7 @@ cat > /xp.json << EOF
 				"clients": [
 					{"id": "$UUID"}
 				],
-            "disableInsecureEncryption": false
+            "disableInsecureEncryption": true
              },
             "streamSettings": {"network": "ws","wsSettings": {"path": "$WSPATH"}}
         }

@@ -3,8 +3,13 @@
     [
         {
             "listen": "/etc/caddy/less",
-            "protocol": "vless",
-            "settings": {"clients": [{"id": "$UUID"}],"decryption": "none"},
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {"id": "$UUID"}
+                ],
+                "disableInsecureEncryption": false
+            },
             "streamSettings": {"network": "ws","wsSettings": {"path": "$PATH"}}
         }
     ],
